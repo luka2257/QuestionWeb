@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question Box</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 500px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h2 {
+      color: #333;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .answer-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 0 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .close-btn {
+      display: block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>Spørgsmål om livet:</h2>
+  <div class="question">
+    <p>Er du til pølser?</p>
+  </div>
+  <button class="answer-btn" onclick="answer1(this)">Ja</button>
+  <button class="answer-btn" onclick="answer2(this)">Nej</button>
+  <button class="close-btn" onclick="closeContainer(this)">Close</button>
+</div>
+
+<script>
+  function answer1(btn) {
+    btn.textContent = "MMhh, pølle pølle";
+  }
+  function answer2(btn) {
+    btn.textContent = "Pøls hele dagen";
+  }
+
+  function closeContainer(btn) {
+    btn.textContent = "Pøls er min livret";
+  }
+</script>
+</body>
+</html>
