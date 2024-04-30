@@ -56,19 +56,31 @@
   </div>
   <button class="answer-btn" onclick="answer1(this)">Ja</button>
   <button class="answer-btn" onclick="answer2(this)">Nej</button>
-  <button class="close-btn" onclick="closeContainer(this)">Close</button>
+  <button class="close-btn" onclick="closeContainer(this)">Luk vindue</button>
 </div>
 
 <script>
   function answer1(btn) {
-    btn.textContent = "MMhh, pølle pølle";
+    if (btn.textContent == "Ja") {
+      btn.textContent = "MMhh, pølle pølle";
+    } else {
+      window.location.replace("asd.html");
+    }
   }
   function answer2(btn) {
-    btn.textContent = "Pøls hele dagen";
+    if (btn.textContent == "Nej") {
+      btn.textContent = "Pøls hele dagen";
+    } else {
+      window.location.replace("asd.html");
+    }
   }
 
   function closeContainer(btn) {
-    btn.textContent = "Pøls er min livret";
+    if (btn.textContent == "Luk vindue") {
+      btn.textContent = "Pøls er min livret";
+    } else {
+      window.location.replace("asd.html");
+    }
   }
 </script>
 </body>
